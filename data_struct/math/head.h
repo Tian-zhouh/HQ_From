@@ -33,5 +33,5 @@ void ReverseLinkList(link_node_t *);
 //11.清空单向链表
 void ClearLinkList(link_node_t *);
 link_node_t *SearchDataLinkListAll(link_node_t *, typedata);
-link_node_t * SortList(link_node_t *,link_node_t *,link_node_t *);
+link_node_t *SortList(link_node_t *, link_node_t *, link_node_t *);
 #endif

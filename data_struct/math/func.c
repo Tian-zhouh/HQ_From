@@ -17,7 +17,7 @@ typedata LengthLinkList(link_node_t *p)
     while (p)
     {
         num++;
-        p=p->next;
+        p = p->next;
     }
     return num;
 }
@@ -39,7 +39,7 @@ typedata InserttypedataoPostLinkList(link_node_t *p, typedata post, typedata dat
     {
         p = p->next;
     }
-    q->data=data;
+    q->data = data;
     q->next = p->next;
     p->next = q;
     return 0;
@@ -124,7 +124,7 @@ link_node_t *SearchDataLinkListAll(link_node_t *p, typedata data)
             q->next = ms;
         }
         i++;
-        p=p->next;
+        p = p->next;
     }
     return q;
 }
@@ -150,44 +150,51 @@ void ReverseLinkList(link_node_t *p)
     link_list_t ms = NULL;
     while (q)
     {
-        ms=q->next;
-        q->next=p->next;
-        p->next=q;
-        q=ms;
+        ms = q->next;
+        q->next = p->next;
+        p->next = q;
+        q = ms;
     }
 }
-void ClearLinkList(link_node_t *p){
-    p=p->next;
-    while(p){
-        link_list_t q=p;
+void ClearLinkList(link_node_t *p)
+{
+    p = p->next;
+    while (p)
+    {
+        link_list_t q = p;
         free(p);
-        p=q->next;
+        p = q->next;
     }
 }
-link_node_t * SortList(link_node_t *p,link_node_t *q,link_node_t *m){
-    p=p->next;
-    q=q->next;
-    while(p&&q){
-        if(p->data>q->data){
-            m->next=q;
-            q=q->next;
-        }else
+link_node_t *SortList(link_node_t *p, link_node_t *q, link_node_t *m)
+{
+    p = p->next;
+    q = q->next;
+    while (p && q)
+    {
+        if (p->data > q->data)
         {
-            m->next=p;     
-            p=p->next;                                                                                                       
+            m->next = q;
+            q = q->next;
         }
-        m=m->next;
+        else
+        {
+            m->next = p;
+            p = p->next;
+        }
+        m = m->next;
     }
     while (p)
     {
-        m->next=p;
-        m=m->next;
-        p=p->next;
+        m->next = p;
+        m = m->next;
+        p = p->next;
     }
-    while(q){
-        m->next=q;
-        m=m->next;
-        q=q->next;
+    while (q)
+    {
+        m->next = q;
+        m = m->next;
+        q = q->next;
     }
     return m;
 }
