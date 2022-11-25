@@ -184,17 +184,11 @@ link_node_t *SortList(link_node_t *p, link_node_t *q, link_node_t *m)
         }
         m = m->next;
     }
-    while (p)
-    {
-        m->next = p;
-        m = m->next;
-        p = p->next;
-    }
-    while (q)
-    {
-        m->next = q;
-        m = m->next;
-        q = q->next;
-    }
-    return m;
+   if(p){
+       m->next=p;
+   }else
+   {
+       m->next=q;
+   }
+   return m;
 }
