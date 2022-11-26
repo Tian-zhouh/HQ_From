@@ -8,7 +8,7 @@ int main(){
     printf("Outsequeue num is %d\n",OutSequeue(p));
     printf("length is %d\n",LengthSequeue(p));
     ClearSequeue(p);
-    printf("length is %d\n",LengthSequeue(p));
+    printf("length is %d\n",LengthSequeue(p));ls
     free(p);
     return 0;
 }
