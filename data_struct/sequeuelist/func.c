@@ -39,7 +39,7 @@ datatype OutSequeue(sequeue_t *p){
     return num;
 }
 int LengthSequeue(sequeue_t *p){
-    return (p->rear)%N-(p->front)%N;
+    return (p->rear-p->front+N)%10;
 }
 void ClearSequeue(sequeue_t *p){
     p->front=p->rear;
