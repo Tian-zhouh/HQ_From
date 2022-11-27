@@ -91,14 +91,13 @@ int IsEpLinkList(link_node_t *p)
 
 int ChangePostLinkList(link_node_t *p, int post, datatype data)
 {
-    int item;    //用于遍历
-    p = p->next; //去头操作
+    int item; //用于遍历
     if (post < 0 || post >= LengthLinkList(p))
     {
         perror("ChangePostLinkList(args) is error");
         return -1;
     }
-    for (item = 0; item < post; item++)
+    for (item = 0; item <= post; item++)
     {
         p = p->next;
     }
@@ -138,7 +137,11 @@ int DeleteDataLinkList(link_node_t *p, datatype data)
             pdel = NULL;
             count++;
         }
-        p = p->next;
+        // printf("%d\t", p->next->data);
+        if (p->next != NULL)
+        {
+            p = p->next;
+        }
     }
 
     return count;

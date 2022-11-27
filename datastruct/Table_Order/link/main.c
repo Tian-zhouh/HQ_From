@@ -22,9 +22,10 @@ int main(int argc, const char *argv[])
         printf("del p->data[%d]==%d\n", randing[tmp] - 1, DeletePostLinkList(p, randing[tmp] - 1));
     }
     printf("Length is %d\n", LengthLinkList(p));
-    ChangePostLinkList(p, 5, 99999);
+    ChangePostLinkList(p, 15,99999);
     ShowLinkList(p);
     DeleteDataLinkList(p, 99999);
+    ReverseLinkList(p);
     ShowLinkList(p);
     ClearLinkList(p);
     free(p);
