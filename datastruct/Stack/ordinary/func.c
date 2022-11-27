@@ -27,7 +27,7 @@ int IsFullSeqStack(seqstack_t *p)
     return p->top + 1 == p->maxlen;
 }
 
-int PushStack(seqstack_t *p, int data)
+int PushStack(seqstack_t *p, datatype data)
 {
     if (IsFullSeqStack(p))
     {
@@ -44,7 +44,7 @@ int IsEpSeqStack(seqstack_t *p)
     return p->top == -1;
 }
 
-int PopSeqStack(seqstack_t *p)
+datatype PopSeqStack(seqstack_t *p)
 {
     if (IsEpSeqStack(p))
     {
