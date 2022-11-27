@@ -6,7 +6,7 @@
 typedef int datatype;
 typedef struct link_node
 {
-    int data;
+    datatype data;
     struct link_node *next;
 } linkstack_t, *link_list_t;
 

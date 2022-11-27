@@ -6,7 +6,7 @@
 typedef int datatype;
 typedef struct stack
 {
-    int *data;
+    datatype *data;
     int maxlen;
     int top;
 } seqstack_t,*seqstack_list_t;
